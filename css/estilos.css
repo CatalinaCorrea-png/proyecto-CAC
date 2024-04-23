@@ -5,19 +5,19 @@
   --terciario: rgb(197, 172, 216);
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Alumni Sans Pinstripe', sans-serif;
 }
 
-body{
+body {
   background-color: var(--fondo);
   color: ghostwhite;
 }
 
-a{
+a {
   text-decoration: none;
 
 }
@@ -27,8 +27,10 @@ a{
 .header {
   background-color: var(--secundario);
   color: var(--primario);
-  height: 10vh; /* initial */
-  position: sticky; /* fixed va a hacer que la imagen se meta debajo del header */
+  height: 10vh;
+  /* initial */
+  position: sticky;
+  /* fixed va a hacer que la imagen se meta debajo del header */
   top: 0;
   z-index: 10;
 
@@ -47,15 +49,15 @@ a{
       font-size: 1.7rem;
     }
 
-    .listaNav{
+    .listaNav {
       list-style: none;
       display: flex;
       align-items: center;
-      
-      .listaItem{
+
+      .listaItem {
         margin-right: 20px;
 
-        .linkNav{
+        .linkNav {
           color: var(--primario);
           text-decoration: none;
           font-weight: 700;
@@ -63,23 +65,25 @@ a{
           padding: 0.5rem 1rem;
 
           transition: transform 0.3s, box-shadow 0.3s, font-size 0.3s, background-image 0.4s;
-          &:hover{
+
+          &:hover {
             transform: scale(0.9);
             font-size: 1.5rem;
             color: var(--terciario);
-            /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);*/
             border-radius: 5px;
             background-color: rgb(46, 21, 65);
           }
         }
-        .linkNav.iniciarSesion{
-          background-image: linear-gradient(rgb(114, 81, 139) 50%,rgb(46, 21, 65) 100%);
+
+        .linkNav.iniciarSesion {
+          background-image: linear-gradient(rgb(114, 81, 139) 50%, rgb(46, 21, 65) 100%);
           color: var(--terciario);
           border-radius: 5px;
-          
-          &:hover{
+
+          &:hover {
             /*background-image: linear-gradient(rgb(114, 81, 139)5%,rgb(46, 21, 65) 40%,rgb(46, 21, 65) 60%,rgb(114, 81, 139) 100%);*/
-            background-image: linear-gradient(rgb(46, 21, 65) 0%,rgb(114, 81, 139) 50%); /** PARA AGREGARLE ANIMACION */
+            background-image: linear-gradient(rgb(46, 21, 65) 0%, rgb(114, 81, 139) 50%);
+            /** PARA AGREGARLE ANIMACION */
           }
         }
       }
@@ -89,10 +93,10 @@ a{
 
 /** ESTILOS PARA HEADER MOVILE Y TABLET */
 @media (max-width: 768px) {
-  .header{
+  .header {
     height: initial;
 
-    .navegacion{
+    .navegacion {
       flex-direction: column;
       margin-left: 10px;
       margin-right: 10px;
@@ -103,16 +107,18 @@ a{
         font-size: 1.3rem;
       }
 
-      .listaNav{
+      .listaNav {
         padding: initial;
-        .listaItem > .linkNav{
+
+        .listaItem>.linkNav {
           font-weight: 600;
           margin-right: initial;
           font-size: 1rem;
           padding: 0.2rem 0.5rem;
 
           transition: font-size 0.3s;
-          &:hover{
+
+          &:hover {
             font-size: 1.1rem;
           }
         }
@@ -120,4 +126,194 @@ a{
 
     }
   }
+}
+
+
+.inicio {
+  background: linear-gradient(to right top, #0000008a, #0000008a), url(../img/grupo-gente-joven-cine_2.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.titulo {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.subtituloPrincipal {
+  text-align: center;
+  text-transform: uppercase;
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.botonRegistrarse {
+  background-color: rgb(46, 21, 65);
+  color: #ffffff;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.inputBuscador {
+  border: 2px solid white;
+  border-radius: 25px;
+  color: #000000;
+  font-size: 1.2rem;
+  height: 50px;
+  margin: 20px 0px;
+  outline: none;
+  padding: 0px 20px;
+  width: 500px;
+}
+
+.botonBuscador {
+  background-color: rgb(114, 81, 139);
+  display: inline-block;
+  color: #ffffff;
+  height: 50px;
+  margin: 20px 10px;
+  padding: 0 20px;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border: 2px solid white;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tituloSection {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.buscadorPeliculas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.buscadorPrincipal {
+  background-color: #181419;
+  color: rgb(255, 255, 255);
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  background-color: rgb(46, 21, 65);
+  color: #ffffff;
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.listaNavs {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.listaItems {
+  margin-left: 20px;
+}
+
+.linkNavs {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.flechaArriba {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+
+.form-registro {
+  background: linear-gradient(to right top, #0000008a, #0000008a), url(../img/camara-video-vintage-gafas-3d-entradas-cine.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 92.9vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.form-sesion {
+  background: linear-gradient(to right top, #0000008a, #0000008a), url(../img/gafas-3d-palomitas-maiz-claqueta-sobre-fondo-hormigon.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 92.9vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.tituloRegistrarse {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.form-label {
+  font-size: 1.5rem;
+}
+.form-control{
+  width: 60vh;
+  height: 5vh;
+}
+
+.form-text{
+  color: aliceblue;
+  font-size: 1rem;
+}
+
+.form-date{
+  width: 40vh;
+  height: 5vh;
+}
+
+.sm-form-control{
+  width: 40vh;
+  height: 5vh;
 }

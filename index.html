@@ -1,42 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!---- Iconos ---->
-  <script src="https://kit.fontawesome.com/f7fb471b65.js" crossorigin="anonymous"></script>
-<!---- Fuente ---->
-  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!---- Iconos ---->
+    <script src="https://kit.fontawesome.com/f7fb471b65.js"
+      crossorigin="anonymous"></script>
+    <!---- Fuente ---->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
-  <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&display=swap" rel="stylesheet">
-<!---- Favicon ---->
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-<!---- Estilos ---->
-  <link rel="stylesheet" href="css/estilos.css">
-  <title>MOVIES.html</title>
-</head>
-<body>
-  <header class="header">
-    <nav class="navegacion">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&display=swap"
+      rel="stylesheet">
+    <!---- Favicon ---->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!---- Estilos ---->
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>MOVIES.html</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navegacion">
         <a href="#" class="anclalogo">
           <i class="fas fa-film" aria-hidden="true"></i>
           <span>MOVIES.html</span>
         </a>
-      <ul class="listaNav">        
-        <li class="listaItem"><a href="#" class="linkNav">Tendencias</a></li>
-        <li class="listaItem"><a href="#" class="linkNav">Registrarse</a></li>
-        <li class="listaItem"><a href="#" class="linkNav iniciarSesion">Iniciar Sesión</a></li>
-      </ul>
-    </nav>
-  </header>
-  
-  <main>
+        <ul class="listaNav">
+          <li class="listaItem"><a href="#" class="linkNav">Tendencias</a></li>
+          <li class="listaItem"><a href="./pages/registrarse.html" class="linkNav">Registrarse</a></li>
+          <li class="listaItem"><a href="./pages/sesion.html"
+              class="linkNav iniciarSesion">Iniciar Sesión</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  </main>
+    <main class="main">
+      <div class="inicio">
+        <h1 class="titulo">Películas y series ilimitadas <br> en un solo
+          lugar</h1>
+        <h2 class="subtituloPrincipal">Disfrutalas donde quieras</h2>
+        <a class="botonRegistrarse"
+          href="./pages/registrarse.html">Registrate</a>
+      </div>
 
-  <footer>
+      <section class="buscadorPrincipal">
+        <h2 class="tituloSection">¿Qué estas buscando para ver?</h2>
+        <form class="buscadorPeliculas">
+          <input class="inputBuscador" type="text" placeholder="Buscar..." id="buscar" name="buscar">
+          <input class="botonBuscador" type="submit" value="Buscar">
+        </form>
+      </section>
+    </main>
 
-  </footer>
-
-</body>
+    <footer class="footer">
+      <nav class="navegacion">
+        <ul class="listaNavs">
+          <li class="listaItems"><a class="linkNavs" href>Términos y condiciones</a></li>
+          <li class="listaItems"><a class="linkNavs" href>Preguntas frecuentes</a></li>
+          <li class="listaItems"><a class="linkNavs" href>Ayuda</a></li>
+        </ul>
+      </nav>
+      <a href="#main" class="flechaArriba">
+        <img src="./img/flecha-hacia-arriba.png" alt="ir arriba flecha">
+      </a>
+    </footer>
+  </body>
 </html>
