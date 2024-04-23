@@ -91,44 +91,9 @@ a {
   }
 }
 
-/** ESTILOS PARA HEADER MOVILE Y TABLET */
-@media (max-width: 768px) {
-  .header {
-    height: initial;
-
-    .navegacion {
-      flex-direction: column;
-      margin-left: 10px;
-      margin-right: 10px;
-      row-gap: 20px;
-
-      .anclalogo {
-        font-weight: 700;
-        font-size: 1.3rem;
-      }
-
-      .listaNav {
-        padding: initial;
-
-        .listaItem>.linkNav {
-          font-weight: 600;
-          margin-right: initial;
-          font-size: 1rem;
-          padding: 0.2rem 0.5rem;
-
-          transition: font-size 0.3s;
-
-          &:hover {
-            font-size: 1.1rem;
-          }
-        }
-      }
-
-    }
-  }
-}
 
 
+/** MAIN */
 .inicio {
   background: linear-gradient(to right top, #0000008a, #0000008a), url(../img/grupo-gente-joven-cine_2.jpg);
   background-size: cover;
@@ -177,7 +142,7 @@ a {
   text-decoration: none;
   transition: transform 0.3s, box-shadow 0.3s;
 }
-
+/** BUSCADOR */
 .inputBuscador {
   border: 2px solid white;
   border-radius: 25px;
@@ -262,7 +227,7 @@ a {
   cursor: pointer;
 }
 
-
+/** FORMS (REGISTRO E INICIO SESION) */
 .form-registro {
   background: linear-gradient(to right top, #0000008a, #0000008a), url(../img/camara-video-vintage-gafas-3d-entradas-cine.jpg);
   background-size: cover;
@@ -316,4 +281,49 @@ a {
 .sm-form-control{
   width: 40vh;
   height: 5vh;
+}
+
+/** ESTILOS PARA HEADER MOVILE Y TABLET */
+@media (max-width: 768px) {
+  .header {
+    height: initial;
+
+    .navegacion {
+      flex-direction: column;
+      margin-left: 10px;
+      margin-right: 10px;
+      row-gap: 20px;
+
+      .anclalogo {
+        font-weight: 700;
+        font-size: 1.3rem;
+      }
+
+      .listaNav {
+        padding: initial;
+
+        .listaItem>.linkNav {
+          font-weight: 600;
+          margin-right: initial;
+          font-size: 1rem;
+          padding: 0.2rem 0.5rem;
+
+          transition: font-size 0.3s;
+
+          &:hover {
+            font-size: 1.1rem;
+          }
+        }
+      }
+
+    }
+  }
+
+  .buscadorPeliculas {
+
+    .inputBuscador {
+      width: 350px;
+      transition: width 0.5s;
+    }
+  }
 }
