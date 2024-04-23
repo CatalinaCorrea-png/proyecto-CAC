@@ -44,7 +44,7 @@ a{
       text-decoration: none;
       color: var(--terciario);
       font-weight: 700;
-      font-size: 1.5rem;
+      font-size: 1.7rem;
     }
 
     .listaNav{
@@ -62,22 +62,24 @@ a{
           font-size: 1.4rem;
           padding: 0.5rem 1rem;
 
-          transition: transform 0.3s, box-shadow 0.3s, font-size 0.3s;
+          transition: transform 0.3s, box-shadow 0.3s, font-size 0.3s, background-image 0.4s;
           &:hover{
             transform: scale(0.9);
             font-size: 1.5rem;
             color: var(--terciario);
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);*/
             border-radius: 5px;
             background-color: rgb(46, 21, 65);
           }
         }
         .linkNav.iniciarSesion{
-          background-color: var(--fondo);
+          background-image: linear-gradient(rgb(114, 81, 139) 50%,rgb(46, 21, 65) 100%);
           color: var(--terciario);
           border-radius: 5px;
+          
           &:hover{
-            background-color: rgb(46, 21, 65);
+            /*background-image: linear-gradient(rgb(114, 81, 139)5%,rgb(46, 21, 65) 40%,rgb(46, 21, 65) 60%,rgb(114, 81, 139) 100%);*/
+            background-image: linear-gradient(rgb(46, 21, 65) 0%,rgb(114, 81, 139) 50%); /** PARA AGREGARLE ANIMACION 
           }
         }
       }
