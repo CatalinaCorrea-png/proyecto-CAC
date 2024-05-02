@@ -4,22 +4,32 @@
   --secundario: rgb(38, 17, 54);
   --terciario: rgb(197, 172, 216);
 }
-
+html {
+	scroll-behavior: smooth;
+}
 * {
+  /* box-sizing: border-box; */
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: 'Alumni Sans Pinstripe', sans-serif;
 }
 
 body {
   background-color: var(--fondo);
   color: ghostwhite;
+  /* animation: mostrar 2.5s both; */
 }
-
 a {
   text-decoration: none;
 
+}
+hr {
+  height: 3px;
+  width: initial;
+  background-color: var(--primario); /*rgb(63, 29, 90)*/
+  margin: 0 200px;
+  border-radius: 10px;
+  border: none;
 }
 
 /** HEADER */
@@ -91,9 +101,8 @@ a {
   }
 }
 
-
-
 /** MAIN */
+
 .inicio {
   background: linear-gradient(to right top, #0000008a, #0000008a), url(../img/grupo-gente-joven-cine_2.jpg);
   background-size: cover;
@@ -142,7 +151,10 @@ a {
   text-decoration: none;
   transition: transform 0.3s, box-shadow 0.3s;
 }
+
+
 /** BUSCADOR */
+
 .inputBuscador {
   border: 2px solid white;
   border-radius: 25px;
@@ -195,29 +207,34 @@ a {
 
 .footer {
   background-color: rgb(46, 21, 65);
-  color: #ffffff;
+  color: var(--terciario);
   height: 15vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  
+  .listaNavs {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .listaItems {
+    margin-left: 20px;
+  }
+  
+  .linkNavs {
+    text-decoration: none;
+    color: var(--terciario);
+    font-weight: 700;
+    font-size: 1.2rem;
+    &:hover{
+      border-bottom: solid 1px var(--primario);
+      color: var(--primario);
+    }
+  }
 }
 
-.listaNavs {
-  list-style: none;
-  display: flex;
-  align-items: center;
-}
-
-.listaItems {
-  margin-left: 20px;
-}
-
-.linkNavs {
-  text-decoration: none;
-  color: #ffffff;
-  font-weight: 700;
-  font-size: 1.2rem;
-}
 
 .flechaArriba {
   position: fixed;
@@ -227,62 +244,9 @@ a {
   cursor: pointer;
 }
 
-/** FORMS (REGISTRO E INICIO SESION) */
-.form-registro {
-  background: linear-gradient(to right top, #0000008a, #0000008a), url(../img/camara-video-vintage-gafas-3d-entradas-cine.jpg);
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 92.9vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
 
-.form-sesion {
-  background: linear-gradient(to right top, #0000008a, #0000008a), url(../img/gafas-3d-palomitas-maiz-claqueta-sobre-fondo-hormigon.jpg);
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 92.9vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
 
-.tituloRegistrarse {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.form-label {
-  font-size: 1.5rem;
-}
-
-.form-control{
-  width: 60vh;
-  height: 5vh;
-}
-
-.form-text{
-  color: aliceblue;
-  font-size: 1rem;
-}
-
-.form-date{
-  width: 40vh;
-  height: 5vh;
-}
-
-.sm-form-control{
-  width: 40vh;
-  height: 5vh;
-}
+/** MOVIE CARDS (TENDENCIAS) */
 
 .link{
   display: block;
@@ -389,9 +353,127 @@ a {
   }
 }
 
+/** ACLAMADAS */
+
+.aclamadas>h2{
+  text-align: center;
+  margin: 0 auto;
+  width: 300px;
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--terciario);
+}
+.aclamadasContainer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-left: 200px;
+  margin-right: 200px;
+  padding: 1.5rem 0;
+  overflow: scroll;
+  overflow-y: hidden;
+  cursor: pointer;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgb(54, 24, 77);
+    border-radius: 10px;
+  }
+
+  .aclamadaItem{
+    margin-right: 10px;
+    margin-left: 10px;
+    p{ 
+      height: 20px; 
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    &:hover{
+      p{ opacity: 1;}
+    }
+    .imagen {
+      width: 150px;
+      height: 250px;
+      border-radius: 10px;
+
+        transition: filter 0.3s;
+        transition: position top 0.5s; /* Esto creo que no funciona */
+        &:hover{
+          filter: blur(3px);
+          position: relative;
+          top: -10px;
+          /* webkit-filter: blur(4px); */
+        }
+      }
+  }
+}
+
+/** FORMS (REGISTRO E INICIO SESION) */
+
+.form-registro {
+  background: linear-gradient(to right top, #0000008a, #0000008a), url(../img/camara-video-vintage-gafas-3d-entradas-cine.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 92.9vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.form-sesion {
+  background: linear-gradient(to right top, #0000008a, #0000008a), url(../img/gafas-3d-palomitas-maiz-claqueta-sobre-fondo-hormigon.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 92.9vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.tituloRegistrarse {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.form-label {
+  font-size: 1.5rem;
+}
+
+.form-control{
+  width: 60vh;
+  height: 5vh;
+}
+
+.form-text{
+  color: aliceblue;
+  font-size: 1rem;
+}
+
+.form-date{
+  width: 40vh;
+  height: 5vh;
+}
+
+.sm-form-control{
+  width: 40vh;
+  height: 5vh;
+}
+
+/** MEDIA QUERIES */
+
 @media screen and (min-width: 768px) {
   .movie_header{
-    width: 65%;
+    width: 50%;
   }
   
   .movie_desc{
@@ -406,9 +488,48 @@ a {
     width: 80%;
     background-position: -100% 10% !important;  
   }
+
 }
 
 @media screen and (max-width: 768px) {
+  .header {
+    height: initial;
+
+    .navegacion {
+      flex-direction: column;
+      margin-left: 10px;
+      margin-right: 10px;
+      row-gap: 20px;
+
+      .anclalogo {
+        font-weight: 700;
+        font-size: 1.3rem;
+      }
+
+      .listaNav {
+        padding: initial;
+
+        .listaItem>.linkNav {
+          font-weight: 600;
+          margin-right: initial;
+          font-size: 1rem;
+          padding: 0.2rem 0.5rem;
+
+          transition: font-size 0.3s;
+
+          &:hover {
+            font-size: 1.1rem;
+          }
+        }
+      }
+
+    }
+  }
+  .inputBuscador {
+    width: 250px;
+    transition: width 0.3s;
+  }
+
   .movie_card{
     width: 95%;
     margin: 70px auto; 
@@ -434,6 +555,12 @@ a {
     background: linear-gradient(to top, #e5e6e6 50%, transparent 100%);
     display: inline-grid;
   }
+
+  .form-control{
+    width: 40vh;
+    transition: width 0.3s;
+  }
+  
 }
 
 
@@ -479,4 +606,19 @@ a {
     width: 40vh;
     height: 5vh;
   }
+}
+
+/** ANIMACIONES */
+
+@keyframes mostrar {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(54, 24, 77);
+  border-radius: 10px;
 }
