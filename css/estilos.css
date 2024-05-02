@@ -555,7 +555,12 @@ hr {
     background: linear-gradient(to top, #e5e6e6 50%, transparent 100%);
     display: inline-grid;
   }
-
+  
+  .aclamadasContainer{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
   .form-control{
     width: 40vh;
     transition: width 0.3s;
