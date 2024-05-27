@@ -39,11 +39,12 @@
 .form-control{
   width: 60vh;
   height: 5vh;
+  font-size: 1.2rem;
 }
 
 .form-text{
   color: aliceblue;
-  font-size: 1rem;
+  font-size: 1.0rem;
 }
 
 .form-date{
@@ -54,4 +55,16 @@
 .sm-form-control{
   width: 40vh;
   height: 5vh;
+}
+
+.error input{
+  border: 2px solid #f00;
+}
+.error-text{
+  color: #f00;
+  text-shadow: 1px 1px 3px black;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
