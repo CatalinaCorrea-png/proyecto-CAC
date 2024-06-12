@@ -28,7 +28,9 @@ function dibujaDatos(json){
 function Pelicula(obj) {
   return `
     <div class="aclamadaItem">
-    <img src="https://image.tmdb.org/t/p/w500/${obj.poster_path}" class="imagen" alt="${obj.title}">
+  <a href="./pages/detalle.html">
+    <img src="https://image.tmdb.org/t/p/w500/${obj.poster_path}" class="imagen" alt="${obj.title}">        
+  </a>
     
     <p>${obj.title}</p>
     </div>

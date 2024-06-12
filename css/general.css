@@ -25,7 +25,8 @@ a {
 hr {
   height: 3px;
   width: initial;
-  background-color: var(--primario); /*rgb(63, 29, 90)*/
+  /* background-color: var(--primario); */
+  background-color: rgb(63, 29, 90); 
   margin: 0 200px;
   border-radius: 10px;
   border: none;
